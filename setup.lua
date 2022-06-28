@@ -775,7 +775,7 @@ getgenv().SetupCMD = function(args)
                 end
             end
             getgenv().LGF_TeleportAltsToUnderTrain()
-        elseif args[2]:lower() == 'bank' then
+        elseif args[2]:lower() == 'club' then
             getgenv().LGF_TeleportAltsToClub = function()
                 if getgenv().alts['Alt1'] == game.Players.LocalPlayer.UserId then
                     game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(-285.3577575683594, -6.208345890045166, -398.874267578125) -- 1
