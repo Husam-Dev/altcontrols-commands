@@ -7,27 +7,22 @@ getgenv().CashAuraCMD = function(args)
                 if getgenv().CA_AutoCashPickup == false then
                     getgenv().CA_AutoCashPickup = true
                     getgenv().MUF_sendChatMessage('Started picking up cash with '..getgenv().MUF_ReturnClosestName(args[2])..'!')
-                    local LF_Loop
-                    local LF_loopFunction = function()
-                        for i, thechild in pairs(game.Workspace:WaitForChild('Ignored'):WaitForChild('Drop'):GetChildren()) do
-                            if thechild.Name == 'MoneyDrop' or thechild.Name == 'MoneyDropCounted' then
-                                if game.Players.LocalPlayer:DistanceFromCharacter(thechild.Position) < 13 then
-                                    fireclickdetector(thechild:FindFirstChild('ClickDetector'), 12)
+                    getgenv().CashAuraStart = function()
+                        for i=1, 10000000000000 do
+                            if getgenv().CA_AutoCashPickup == false then
+                                break
+                            end
+                            for i, thechild in pairs(game.Workspace:WaitForChild('Ignored'):WaitForChild('Drop'):GetChildren()) do
+                                if thechild.Name == 'MoneyDrop' or thechild.Name == 'MoneyDropCounted' then
+                                    if game.Players.LocalPlayer:DistanceFromCharacter(thechild.Position) < 13 then
+                                        fireclickdetector(thechild:FindFirstChild('ClickDetector'), 12)
+                                    end
                                 end
                             end
+                            wait(1)
                         end
-                    end;
-                    local LF_Start = function()
-                        LF_Loop = RunService.Heartbeat:Connect(LF_loopFunction);
-                    end;
-                    local LF_Pause = function()
-                        LF_Loop:Disconnect()
-                        getgenv().MUF_sendChatMessage('Stopped Cashaura')
-                    end;
-                
-                    LF_Start()
-                    repeat wait() until getgenv().CA_AutoCashPickup == false
-                    LF_Pause()
+                    end
+                    getgenv().CashAuraStart()
                 elseif getgenv().CA_AutoCashPickup == true then
                     getgenv().CA_AutoCashPickup = false
                     getgenv().MUF_sendChatMessage(getgenv().MUF_ReturnClosestPlayer(args[2])..' No longer picking up cash!')
@@ -38,27 +33,22 @@ getgenv().CashAuraCMD = function(args)
         if getgenv().CA_AutoCashPickup == false then
             getgenv().CA_AutoCashPickup = true
             getgenv().MUF_sendChatMessage('Started picking up cash!')
-            local LF_Loop
-            local LF_loopFunction = function()
-                for i, thechild in pairs(game.Workspace:WaitForChild('Ignored'):WaitForChild('Drop'):GetChildren()) do
-                    if thechild.Name == 'MoneyDrop' or thechild.Name == 'MoneyDropCounted' then
-                        if game.Players.LocalPlayer:DistanceFromCharacter(thechild.Position) < 13 then
-                            fireclickdetector(thechild:FindFirstChild('ClickDetector'), 12)
+            getgenv().CashAuraStart = function()
+                for i=1, 10000000000000 do
+                    if getgenv().CA_AutoCashPickup == false then
+                        break
+                    end
+                    for i, thechild in pairs(game.Workspace:WaitForChild('Ignored'):WaitForChild('Drop'):GetChildren()) do
+                        if thechild.Name == 'MoneyDrop' or thechild.Name == 'MoneyDropCounted' then
+                            if game.Players.LocalPlayer:DistanceFromCharacter(thechild.Position) < 13 then
+                                fireclickdetector(thechild:FindFirstChild('ClickDetector'), 12)
+                            end
                         end
                     end
+                    wait(1)
                 end
-            end;
-            local LF_Start = function()
-                LF_Loop = RunService.Heartbeat:Connect(LF_loopFunction);
-            end;
-            local LF_Pause = function()
-                LF_Loop:Disconnect()
-                getgenv().MUF_sendChatMessage('Stopped Cashaura')
-            end;
-        
-            LF_Start()
-            repeat wait() until getgenv().CA_AutoCashPickup == false
-            LF_Pause()
+            end
+            getgenv().CashAuraStart()
         elseif getgenv().CA_AutoCashPickup == true then
             getgenv().CA_AutoCashPickup = false
             getgenv().MUF_sendChatMessage('Stopped picking up cash!')
