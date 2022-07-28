@@ -1,6 +1,10 @@
 getgenv().ExecutedsetupCMD = true
 
 getgenv().setupCMD = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+    getgenv().CA_IsFreezing = false
+    getgenv().CA_IsAirlocking = false
+    getgenv().CA_IsGraving = false
     if args[2] then
         if args[2]:lower() == 'bank' then
             getgenv().LGF_TeleportAltsToBank = function()
