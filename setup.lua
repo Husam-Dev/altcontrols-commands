@@ -330,7 +330,7 @@ getgenv().setupCMD = function()
                 end
             end
             LGF_TeleportAltsToTrain()
-        elseif args[2]:lower() == 'sz3' then
+        elseif args[2]:lower() == 'sz3' or args[2]:lower() == 's3' then
             getgenv().LGF_TeleportAltsToSafeZone3 = function()
                 if getgenv().alts['Alt1'] == game.Players.LocalPlayer.UserId then
                     game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(116.99, 11.97, 140.87) -- 1
