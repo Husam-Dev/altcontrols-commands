@@ -27,3 +27,4 @@
 + Airlock
   + !airlock <altname, all, none=all> <height number>
   + Note you can hse the command again to make it airlock/unairlock also you can make it unairlock with !undo command
++ I am lazy rn, I am finish later - Husam#001
