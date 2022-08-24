@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored=false;local a=game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")local b=Instance.new("Animation")b.AnimationId="http://www.roblox.com/asset/?id=5918726674"local c=a:LoadAnimation(b)c:Play()if ChatMessages then MUF_sendChatMessage('Vibing Dolphin Dance!')end
