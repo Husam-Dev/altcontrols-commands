@@ -1,1 +1,1 @@
-getgenv().ExecutedhideCMD=true;getgenv().hideCMD=function()game.Players.LocalPlayer.Character.HumanoidRootPart.Position=CFrame.new(0.8007601499557495,-58.702049255371094,146.635498046875)end
+getgenv().ExecutedhideCMD=true;getgenv().hideCMD=function()game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored=false;getgenv().CA_IsFreezing=false;getgenv().CA_IsAirlocking=false;getgenv().CA_IsGraving=false;game.Players.LocalPlayer.Character.HumanoidRootPart.Position=CFrame.new(0.8007601499557495,-58.702049255371094,146.635498046875)end
