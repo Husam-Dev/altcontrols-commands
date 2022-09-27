@@ -1,0 +1,1 @@
+getgenv().ExecutedstopCMD=true;getgenv().stopCMD=function()getgenv().CA_DroppingUntil=false;getgenv().CA_DropUntilDroppedAmount=0;getgenv().CA_DropUntilAmount=0;getgenv().CA_Dropping=false;game.ReplicatedStorage.MainEvent:FireServer("Block",false)end
